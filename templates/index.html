@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Test Page</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Test Page</h1>
+        <p>This is a randomly generated HTML page for testing purposes.</p>
+        <input type="text" placeholder="Enter something...">
+        <button onclick="alertMessage()">Click Me!</button>
+        <div id="output" style="margin-top:20px; color: green;"></div>
+    </div>
+
+    <script>
+        function alertMessage() {
+            const input = document.querySelector('input').value;
+            if(input.trim() === "") {
+                alert("Please enter something!");
+            } else {
+                document.getElementById("output").innerText = "You entered: " + input;
+            }
+        }
+    </script>
+</body>
+</html>
