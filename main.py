@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 
 
@@ -8,13 +8,13 @@ app=Flask(__name__)
 
 @app.route("/")
 def learn():
-    return "Learning Flask from youtube"
+    return "<html><H1>learning flask<H1><html>"
 
 
 
 @app.route ("/index")
 def index():
-    return "welcome to index page"
+    return render_template("index.html")
 
 
 
