@@ -34,10 +34,19 @@ def form ():
 
 
 
+@app.route("/submit",methods = ["GET","POST"])
+def submit ():
+    if request.method == "POST":
+        name = request.form["name"]
+        return f" hello {name}!"
+    return render_template("form.html")
 
 
 
-    
+
+
+
+
 if __name__ == "__main__":
     app.run(debug = True)
 
